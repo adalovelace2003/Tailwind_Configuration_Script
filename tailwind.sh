@@ -36,6 +36,9 @@ echo '''<!DOCTYPE html>
     &nbsp; &nbsp; &nbsp; 
     <a href = "https://www.github.com/adalovelace2003" target="_blank" class="text-white underline td underline-offset-1 "> Ada Lovelace github.com/adalovelace2003 </a>
 </div>
+<div class="container m-auto w-1/2 mt-10 h-10  bg-black text-center pt-3 p-10  rounded-full">
+<a href = "https://github.com/adalovelace2003/Tailwind_Configuration_Script" target="_blank" class="text-white   td  "> Manual &nbsp;&nbsp; -> &nbsp;&nbsp;   https://github.com/adalovelace2003/Tailwind_Configuration_Script</a>
+</div>
 </body>
 </html>''' >  dist/index.html &&
 echo " Running the command that watch for the changes " && 
