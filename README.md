@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tailwind CSS Configuration Script</title>
+    
   </head>
   <body>
     <h1>Tailwind CSS Configuration Script</h1>
