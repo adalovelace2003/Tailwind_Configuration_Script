@@ -19,6 +19,7 @@ module.exports = {
 }
 ''' > tailwind.config.js &&
 echo " making dist directory" &&  mkdir dist &&
+echo " creating index.js file" && touch dist/index.js &&
 echo " Writing content to html file " && 
 echo '''<!DOCTYPE html>                            
 <html lang="en" class="bg-teal-300">
@@ -40,6 +41,7 @@ echo '''<!DOCTYPE html>
 <a href = "https://github.com/adalovelace2003/Tailwind_Configuration_Script" target="_blank" class="text-white   td  "> Manual &nbsp;&nbsp; -> &nbsp;&nbsp;   https://github.com/adalovelace2003/Tailwind_Configuration_Script</a>
 </div>
 </body>
+<script src="/dist/index.js"></script>
 </html>''' >  dist/index.html &&
 echo " Running the command that watch for the changes " && 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch 
