@@ -1,26 +1,26 @@
-echo " Installing tailwindcss" && 
+echo "Installing tailwindcss" && 
 npm install -D tailwindcss &&
-echo " Initailaizing Tailwind CSS" && 
+echo "Initailaizing Tailwind CSS" && 
 npx tailwindcss init &&
-echo " Making src directory " && 
+echo "Making src directory " && 
 mkdir src &&
 echo '''Writing content to  tailwind config js file''' && 
 echo "@tailwind base; 
 @tailwind components;
 @tailwind utilities;" > src/input.css &&
-echo " Writing content to html file" &&  echo '''
+echo "Writing content to config js file " &&  echo '''
 /** @type {import(tailwindcss).Config} */
 module.exports = {
-  content: ["./dist/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
 ''' > tailwind.config.js &&
-echo " making dist directory" &&  mkdir dist &&
-echo " creating index.js file" && touch dist/index.js &&
-echo " Writing content to html file " && 
+echo "Making dist directory" &&  mkdir dist &&
+echo "Creating index.js file" && touch src/index.js &&
+echo "Writing content to index.html" && 
 echo '''<!DOCTYPE html>                            
 <html lang="en" class="bg-teal-300">
 <head>                              
@@ -41,7 +41,7 @@ echo '''<!DOCTYPE html>
 <a href = "https://github.com/adalovelace2003/Tailwind_Configuration_Script" target="_blank" class="text-white   td  "> Manual &nbsp;&nbsp; -> &nbsp;&nbsp;   https://github.com/adalovelace2003/Tailwind_Configuration_Script</a>
 </div>
 </body>
-<script src="/dist/index.js"></script>
-</html>''' >  dist/index.html &&
-echo " Running the command that watch for the changes " && 
+<script src="/src/index.js"></script>
+</html>''' >  src/index.html &&
+echo "Running the command that watch for the changes " && 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch 
